@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "19a78ecb-5312-4d3b-9c10-d4166ac171db": {
+      "ProjectGuid": "19a78ecb-5312-4d3b-9c10-d4166ac171db",
+      "DisplayName": "KiltwalkCertificateGenerator",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}
