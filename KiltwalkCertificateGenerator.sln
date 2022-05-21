@@ -5,7 +5,10 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KiltwalkCertificateGenerator", "KiltwalkCertificateGenerator.csproj", "{19A78ECB-5312-4D3B-9C10-D4166AC171DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowTests", "SpecFlowTests\SpecFlowTests.csproj", "{654F6417-34A2-4E7B-B1D9-38E52A02F815}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecFlowTests", "SpecFlowTests\SpecFlowTests.csproj", "{654F6417-34A2-4E7B-B1D9-38E52A02F815}"
+	ProjectSection(ProjectDependencies) = postProject
+		{19A78ECB-5312-4D3B-9C10-D4166AC171DB} = {19A78ECB-5312-4D3B-9C10-D4166AC171DB}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

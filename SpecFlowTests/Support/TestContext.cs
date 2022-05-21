@@ -2,7 +2,7 @@
 {
     public class TestContext
     {
-        public string inputsLocation { get; set; }
-        public string templateLocation { get; set; }
+        public string inputsLocation { get; set; } = default!;
+        public string templateLocation { get; set; } = default!;
     }
 }

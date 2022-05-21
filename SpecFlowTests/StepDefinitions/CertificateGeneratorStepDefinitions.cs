@@ -1,3 +1,4 @@
+using KiltwalkCertificateGenerator;
 using System.Diagnostics;
 
 namespace SpecFlowTests.StepDefinitions
@@ -27,20 +28,9 @@ namespace SpecFlowTests.StepDefinitions
         [When(@"the tool is used to generate certificates")]
         public void WhenTheToolIsUsedToGenerateCertificates()
         {
-            var exe = Path.Combine(Path.GetFullPath(Directory.GetCurrentDirectory() + @"..\..\..\..\..\bin\Debug"), "KiltwalkCertificateGenerator.exe");
-            //Process.Start(exe, $"{_context.inputsLocation} {_context.templateLocation}").WaitForExit();
+            var certificateGenerator = new CertificateGenerator();
 
-            //Process process = new Process();
-            //process.StartInfo.FileName = exe;
-            //process.StartInfo.Arguments = $"{_context.inputsLocation} {_context.templateLocation}";
-
-            //process.Start();
-
-            //process.WaitForExit();
-            //// Check for sucessful completion
-            //var run = (process.ExitCode == 0) ? true : false;
-
-            Process.Start(@"C:\\temp\\diff.txt").WaitForExit();SocketsHttpConnectionContext 
+            certificateGenerator.Execute(_context.inputsLocation, _context.templateLocation);
         }
 
         [Then(@"there are (.*) \.(.*) output certificates generated")]
@@ -51,6 +41,13 @@ namespace SpecFlowTests.StepDefinitions
             int numPpt = di.GetFiles($"*.{fileType}", SearchOption.AllDirectories).Length;
 
             numPpt.Should().Be(expectedCount);
+        }
+
+        [BeforeScenario]
+        [AfterScenario]
+        public void CleanupTestRun()
+        {
+            Directory.Delete(Path.Combine(Directory.GetCurrentDirectory() + @"..\..\..\..\..\demo\Output"), true);
         }
     }
 }
