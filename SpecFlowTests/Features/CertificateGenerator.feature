@@ -4,7 +4,7 @@
 
 @functionalityTest
 Scenario: Kiltwalk certificates are correctly generated
-	Given the input file contains 66 name/value pairs including duplicates
+	Given the input file contains 3 name/value pairs including duplicates
 	And the Kiltwalk certificate template is used
 	When the tool is used to generate certificates
 	Then there are 3 .pptx output certificates generated
